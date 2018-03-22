@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+    crossorigin="anonymous">
+
+  <link rel="stylesheet" href="./style.css">
+  <title>Quotes App</title>
+</head>
+
+<body>
+  <header class="mb-4">
+    <nav class="navbar fixed-top mb-6 navbar-light bg-primary d-none d-md-inline mr-auto">
+      <div class="container ">
+        <span class="col-md-2" data-toggle="tooltip" data-placement="top" title="Click to clear all qoutes">
+          <button id="clear-quote" class="btn  btn-secondary btn-md rounded-0 box-shadow d-inline disabled">
+            <span class="smallText">CLEAR ALL</span>
+          </button>
+        </span>
+        <span class="col-md-8 text-center mx-auto">
+          <div class="navbar-brand navbar-nav " href="#">
+            <h2 class="text-light smallHeader">Quotes App</h2>
+          </div>
+        </span>
+        <span class="col-md-2 " data-toggle="tooltip" data-placement="top" title="Click to change quote">
+          <button id="change-quote" class="btn  btn-secondary btn-md d-inline rounded-0 box-shadow smallText disabled">
+            <span class="smallText">CHANGE QUOTE</span>
+          </button>
+        </span>
+      </div>
+    </nav>
+    <!-- mobile nav bar -->
+    <nav class="navbar fixed-top mb-6 navbar-light bg-primary  d-inline-block d-md-none mr-auto">
+      <div class="container ">
+        <span class="col-sm-8 col-2 text-center mx-auto">
+          <div class="navbar-brand navbar-nav " href="#">
+            <h2 class="text-light smallHeader">Quotes App</h2>
+          </div>
+        </span>
+        <span class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+          <div class="btn-group mr-2" role="group" aria-label="First group" data-toggle="tooltip" data-placement="top" title="Click to clear all quotes">
+            <button id="clear-quote" class="btn  btn-secondary btn-sm rounded-0 box-shadow disabled">
+              <i class="fa fa-eraser"></i>
+            </button>
+          </div>
+          <div class="btn-group mr-2" role="group" aria-label="Second group"data-toggle="tooltip" data-placement="top" title="Click to change quote" >
+            <button id="change-quote" class="btn  btn-secondary btn-sm rounded-0 box-shadow disabled">
+              <i class="fa fa-edit"></i>
+            </button>
+          </div>
+        </span>
+
+      </div>
+    </nav>
+  </header>
+
+  <section id="showcase">
+    <!-- input Fields -->
+    <div class="container bg-transparent mt-4">
+      <div id="add-quotes" class="card card-body mt-4 bg-transparent">
+        <h4 id="form-title" class="card-title text-center display-md-1 display-sm-1">Add Quote</h4>
+        <hr>
+        <form id="quote-form" class="needs-validation" novalidate>
+          <div class="form-group">
+            <label for="author" class="h4 text-light">Author</label>
+            <input type="text" class="form-control" id="author" placeholder="Enter Author Name" value="Anonymous" required>
+            </input>
+          </div>
+          <div class="form-group shadow-textarea">
+            <label for="quote" class="h4 text-light">Quote</label>
+            <textarea class="form-control z-depth-1 textarea" id="quote" rows="3" placeholder="Write Quote Here..."></textarea>
+          </div>
+
+          <button type="submit" id="add-btn" class="add-btn btn btn-lg btn-outline-primary btn-block">
+            <i class="fa fa-plus"></i> ADD QUOTE
+          </button>
+          <button type="submit" id="update-btn" class="update-btn btn btn-lg btn-outline-warning block">
+            <i class="fa fa-arrow-circle-up"></i> UPDATE QUOTE
+          </button>
+          <button type="submit" id="delete-btn" class="delete-btn btn btn-lg btn-outline-danger block ">
+            <i class="fa fa-times"></i> DELETE QUOTE
+          </button>
+          <button type="submit" id="back-btn" class="back-btn btn btn-lg btn-outline-secondary pull-right block">
+            <i class="fa fa-arrow-circle-left"></i> BACK
+          </button>
+        </form>
+      </div>
+      <div id="alert" role="alert"> </div>
+    </div>
+
+    <div id="display-quote" class="container-fluid marginTop" data-toggle="tooltip" data-placement="top" title="Click to edit">
+      <!-- display Quotes -->
+    </div>
+  </section>
+
+  <!-- JQUERY -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+
+  <!-- Popper.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+
+  <!-- Bootstrap.js -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
